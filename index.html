@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#060606">
+  <title>NOVA | Indumentaria urbana técnica</title>
+  <meta name="description" content="NOVA: indumentaria urbana técnica en series limitadas. Únete a la lista y sé el primero en conocer cada lanzamiento.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="hero" id="inicio">
+
+    <!-- Fondo decorativo -->
+    <div class="hero__bg" aria-hidden="true">
+      <canvas id="particles"></canvas>
+      <span class="hero__ghost">NOVA</span>
+      <span class="line line--1"></span>
+      <span class="line line--2"></span>
+      <span class="line line--3"></span>
+      <div class="hero__grid"></div>
+    </div>
+
+    <!-- Hoodie principal asomando abajo -->
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hd hd--main">
+      <svg class="hoodie" viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+        <g stroke="#5a5a61" stroke-width="3" stroke-linejoin="round">
+          <path d="M148 186L252 186L262 250L270 395L130 395L138 250Z" fill="#28282c"/>
+          <path d="M150 188C120 198 100 210 92 240L66 340L76 378L128 392L142 345L152 250Z" fill="#2c2c30"/>
+<path class="hd-stripe" d="M98 238L110 244L88 340L76 336Z" fill="#a0a0a8" stroke="none"/>
+<path class="hd-stripe" d="M70 352L136 369L134 376L69 359ZM73 366L132 381L131 388L73 373Z" fill="#a0a0a8" stroke="none"/>
+<path class="hd-stripe" d="M170 192H192V392H166Z" fill="#8e8e96" stroke="none"/>
+<path d="M146 346L166 330L167 388H144Z" fill="#1c1c1f"/>
+<path d="M146 346L166 330" stroke="#8e8e96" stroke-width="4" fill="none"/>
+          <g transform="translate(400 0) scale(-1 1)">
+          <path d="M150 188C120 198 100 210 92 240L66 340L76 378L128 392L142 345L152 250Z" fill="#2c2c30"/>
+<path class="hd-stripe" d="M98 238L110 244L88 340L76 336Z" fill="#a0a0a8" stroke="none"/>
+<path class="hd-stripe" d="M70 352L136 369L134 376L69 359ZM73 366L132 381L131 388L73 373Z" fill="#a0a0a8" stroke="none"/>
+<path class="hd-stripe" d="M170 192H192V392H166Z" fill="#8e8e96" stroke="none"/>
+<path d="M146 346L166 330L167 388H144Z" fill="#1c1c1f"/>
+<path d="M146 346L166 330" stroke="#8e8e96" stroke-width="4" fill="none"/>
+          </g>
+          <path d="M128 392H272L276 418Q200 432 124 418Z" fill="#131315"/>
+          <rect x="197" y="186" width="6" height="206" fill="#c9c9cf" stroke="none"/>
+          <path d="M118 178C100 95 138 28 200 28C262 28 300 95 282 178L246 192H154Z" fill="#2c2c30"/>
+          <path d="M186 34C193 30 207 30 214 34L210 62H190Z" fill="#d8d8dc" stroke="none"/>
+          <path d="M140 162C128 100 158 62 200 62C242 62 272 100 260 162C250 186 150 186 140 162Z" fill="#09090a"/>
+          <path class="hd-stripe" d="M140 162C128 100 158 62 200 62C242 62 272 100 260 162" fill="none" stroke="#a0a0a8" stroke-width="6"/>
+          <path class="hd-face" d="M168 152C160 112 175 90 200 90C225 90 240 112 232 152C226 174 174 174 168 152Z" fill="#6a6a71" stroke="none"/>
+          <g class="hd-string"><path d="M176 188L172 255" stroke="#e5e5e8" stroke-width="3" fill="none"/><rect x="169" y="255" width="6" height="14" rx="2" fill="#e5e5e8" stroke="none"/></g>
+          <g class="hd-string hd-string--b"><path d="M224 188L228 255" stroke="#e5e5e8" stroke-width="3" fill="none"/><rect x="225" y="255" width="6" height="14" rx="2" fill="#e5e5e8" stroke="none"/></g>
+        </g>
+      </svg>
+      </div>
+    </div>
+
+    <!-- Más hoodies repartidos por la página (los rellena motion.js) -->
+    <div class="hero__deco" aria-hidden="true">
+      <div class="hd hd--l" data-hoodie></div>
+      <div class="hd hd--r" data-hoodie></div>
+      <div class="hd hd--tl" data-hoodie></div>
+      <div class="hd hd--br" data-hoodie></div>
+    </div>
+
+    <!-- Franja de promoción (arriba del todo) -->
+    <div class="topbar" aria-hidden="true">
+      <div class="topbar__track">
+        <span>★ 10% de descuento en tu primera compra ★ Solo para quienes se unen a la lista ★ Serie limitada ★ 10% de descuento en tu primera compra ★ Solo para quienes se unen a la lista ★ Serie limitada </span>
+        <span>★ 10% de descuento en tu primera compra ★ Solo para quienes se unen a la lista ★ Serie limitada ★ 10% de descuento en tu primera compra ★ Solo para quienes se unen a la lista ★ Serie limitada </span>
+      </div>
+    </div>
+
+    <!-- Navegación -->
+    <header class="nav ring">
+      <div class="nav__left">
+        <a class="nav__logo" href="#inicio" translate="no">NOV<span>A</span></a>
+        <span class="nav__status"><i></i>Lista abierta</span>
+      </div>
+      <span class="nav__mark" data-hoodie aria-hidden="true"></span>
+      <a class="nav__cta shine" href="#email" id="nav-cta">Unirme a la lista</a>
+    </header>
+
+    <!-- Contenido + formulario -->
+    <div class="hero__content">
+      <p class="eyebrow rise"><span class="dot"></span> Indumentaria urbana técnica</p>
+      <h1 class="rise" style="--d:.12s">Viste con <em>autoridad</em> silenciosa.</h1>
+      <p class="hero__text rise" style="--d:.24s">
+        Prendas de serie limitada, corte asimétrico y algodón 320 GSM.
+      </p>
+
+      <!-- Cupón de descuento -->
+      <div class="coupon rise" style="--d:.3s">
+        <span class="coupon__pct shine">10%<small>DCTO</small></span>
+        <span class="coupon__txt">
+          <strong>10% de descuento en tu primera compra</strong>
+          Solo para quienes se unen a la lista.
+        </span>
+      </div>
+
+      <form id="subscribe-form" class="rise" style="--d:.36s" novalidate>
+        <label for="email" class="sr-only">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="tucorreo@ejemplo.com"
+          autocomplete="email"
+          required
+        >
+        <button type="submit" id="submit-btn">Suscribirme</button>
+      </form>
+
+      <p id="form-message" class="message" role="status" aria-live="polite" hidden></p>
+
+      <p class="privacy rise" style="--d:.48s">Solo usaremos tu correo para avisarte de lanzamientos de NOVA.</p>
+
+      <a class="brand-btn ring shine rise" style="--d:.55s" href="https://redonef1.github.io/PROYECTO-MARCA/" target="_blank" rel="noopener">
+        Conocer la marca
+        <span class="brand-btn__arrow" aria-hidden="true">↗</span>
+        <span class="sr-only">(se abre en una pestaña nueva)</span>
+      </a>
+    </div>
+
+    <p class="hero__copy">© 2026 NOVA. Todos los derechos reservados.</p>
+
+  </main>
+
+  <!-- 1. Librería oficial de EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- 2. Tus datos de EmailJS -->
+  <script src="config.js"></script>
+  <!-- 3. Lógica del formulario -->
+  <script src="script.js"></script>
+  <!-- 4. Movimiento -->
+  <script src="motion.js"></script>
+
+</body>
+</html>
