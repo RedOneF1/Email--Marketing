@@ -690,20 +690,17 @@ button:focus-visible {
   .hero__text { display: none; }
 }
 
-/* Respeta a quienes prefieren menos movimiento */
+/* Respeta "Reducir movimiento": solo se apagan los movimientos grandes.
+   Los brillos y destellos suaves se mantienen. Con FORZAR_MOVIMIENTO = true
+   en motion.js (clase force-motion) esta regla no se aplica. */
 @media (prefers-reduced-motion: reduce) {
-  .hoodie,
-  .hd-string,
-  .hd-face,
-  .hd-stripe,
-  .topbar,
-  .topbar__track,
-  .nav__status i,
-  .ring::before,
-  .shine::after,
-  .line,
-  .rise,
-  input[type="email"].is-invalid { animation: none; }
+  html:not(.force-motion) { scroll-behavior: auto; }
 
-  .glow { display: none; }
+  html:not(.force-motion) .hoodie,
+  html:not(.force-motion) .topbar__track,
+  html:not(.force-motion) .line,
+  html:not(.force-motion) .rise,
+  html:not(.force-motion) input[type="email"].is-invalid { animation: none; }
+
+  html:not(.force-motion) .glow { display: none; }
 }
